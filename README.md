@@ -1,14 +1,18 @@
-# Civis — Real-World Contribution Proofs on Creditcoin
+<div align="center">
 
-> Prove your public contributions on-chain. Earn soulbound CIVIS tokens and NFTs for verified charitable donations, volunteering, and real-world public good. Built on Creditcoin — the RWA blockchain.
+# Civis <br> Real-World Contribution Proofs on Creditcoin
+
+> Prove your public contributions on-chain. <br> Earn soulbound CIVIS tokens and NFTs for verified charitable donations, volunteering, and real-world public good. <br> Built on Creditcoin — the RWA blockchain.
 
 [![Built on Creditcoin](https://img.shields.io/badge/Chain-Creditcoin%20Testnet-10b981)](https://creditcoin.org)
 [![ZK Proofs by vlayer](https://img.shields.io/badge/ZK%20Proofs-vlayer-blue)](https://vlayer.xyz)
 [![Explorer](https://img.shields.io/badge/Explorer-Blockscout-orange)](https://creditcoin-testnet.blockscout.com)
 
+</div>
+
 ---
 
-## What Is Civis?
+## What is Civis?
 
 Real-world public contributions — charitable donations, volunteering, environmental actions, education, healthcare, and community service — are invisible to the world. There is no universal, verifiable, tamper-proof record of human contribution. Existing platforms are siloed, centralised, and easily manipulated. Good deeds leave no permanent trace.
 
@@ -106,8 +110,6 @@ npm run dev
 # Visit http://localhost:3030
 ```
 
-See [docs/DEVELOPER.md](docs/DEVELOPER.md) for the full development guide including local Anvil testing, Creditcoin Testnet deployment, and vlayer proof configuration.
-
 ---
 
 ## Tech Stack
@@ -148,4 +150,12 @@ Civis supports six Real-World Asset contribution categories:
 - [vlayer](https://vlayer.xyz) — ZK email & web proofs
 - [Blockscout Explorer](https://creditcoin-testnet.blockscout.com) — Creditcoin Testnet block explorer
 - [Blockscout Merits](https://merits.blockscout.com) — Cross-chain loyalty rewards
-- [Developer Guide](docs/DEVELOPER.md)
+
+<div align="center">
+
+<h3>Built By
+
+[Charles](https://github.com/charlesms1246) x [Immanuel](https://github.com/xavio2495)
+
+</h3>
+</div>
