@@ -338,7 +338,8 @@ export function WikipediaClaim() {
       // Mint the Civis Proof NFT using the proof verifier
       const result = await mintCivisNFT({
         actionHash: emailProofResult.emailHash,
-        actionValue: emailProofResult.donationAmount,
+        // Encode proofTypeId so fetchNFTMetadata can retrieve the correct artwork later.
+        actionValue: `wikipedia-donation|${emailProofResult.donationAmount}`,
         categoryId: 0 // 0 = Donation
       }, address)
       

@@ -16,7 +16,7 @@ const mockCivisProofs = [
     category: 'Donation',
     civisPoints: 20,
     dateEarned: '2026-02-14',
-    imageUrl: '/nft/civis-donation.png',
+    imageUrl: '/nft/wiki.png',
     verified: true,
   },
   {
@@ -26,7 +26,7 @@ const mockCivisProofs = [
     category: 'Donation',
     civisPoints: 20,
     dateEarned: '2026-02-20',
-    imageUrl: '/nft/civis-donation.png',
+    imageUrl: '/nft/redcross.png',
     verified: true,
   },
   {
@@ -36,7 +36,7 @@ const mockCivisProofs = [
     category: 'Donation',
     civisPoints: 20,
     dateEarned: '2026-03-01',
-    imageUrl: '/nft/civis-donation.png',
+    imageUrl: '/nft/msf.png',
     verified: true,
   },
 ]

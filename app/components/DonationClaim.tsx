@@ -341,7 +341,8 @@ export function DonationClaim({ proofTypeId }: DonationClaimProps) {
       
       const result = await mintCivisNFT({
         actionHash: emailProofResult.emailHash,
-        actionValue: emailProofResult.donationAmount,
+        // Encode proofTypeId so fetchNFTMetadata can retrieve the correct artwork later.
+        actionValue: `${proofTypeId}|${emailProofResult.donationAmount}`,
         categoryId: config.categoryId
       }, address)
       

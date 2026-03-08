@@ -76,8 +76,27 @@ export const CIVIS_NFT_ABI = [
       { "name": "to", "type": "address", "indexed": true },
       { "name": "tokenId", "type": "uint256", "indexed": true }
     ]
+  },
+  {
+    "type": "function",
+    "name": "actionValues",
+    "inputs": [{ "name": "tokenId", "type": "uint256", "internalType": "uint256" }],
+    "outputs": [{ "name": "", "type": "string" }],
+    "stateMutability": "view"
   }
 ] as const
+
+// Map a stored actionValue (format: "proofTypeId|amount" or legacy "amount") to
+// the correct NFT artwork. Falls back to the Wikipedia image for legacy tokens.
+function imageUrlFromActionValue(actionValue: string): string {
+  const proofType = actionValue.split('|')[0]
+  switch (proofType) {
+    case 'red-cross-donation': return '/nft/redcross.png'
+    case 'msf-donation':       return '/nft/msf.png'
+    case 'wikipedia-donation': return '/nft/wiki.png'
+    default:                   return '/nft/wiki.png' // legacy tokens stored plain amount
+  }
+}
 
 // CivisProofVerifier ABI — simplified direct verify (no vlayer Proof struct)
 export const CIVIS_PROOF_VERIFIER_ABI = [
@@ -781,6 +800,19 @@ async function fetchNFTMetadata(
       args: [BigInt(tokenId)],
     })
 
+    // Read the stored actionValue from the contract so we can pick the right artwork.
+    // Format is "proofTypeId|amount" for tokens minted after the encoding update,
+    // or a plain amount string for legacy tokens.
+    let storedActionValue = ''
+    try {
+      storedActionValue = await publicClient.readContract({
+        address: contractAddress as `0x${string}`,
+        abi: CIVIS_NFT_ABI,
+        functionName: 'actionValues',
+        args: [BigInt(tokenId)],
+      }) as string
+    } catch (_) { /* older ABI — ignore */ }
+
     const metadata: NFTMetadata = {
       id: `civis-nft-${tokenId}`,
       title: `Civis Proof #${tokenId}`,
@@ -788,7 +820,7 @@ async function fetchNFTMetadata(
       category: 'Donation', // Default — overridden if on-chain metadata available
       civisPoints: 100,
       dateEarned: new Date().toISOString().split('T')[0],
-      imageUrl: '/nft/gift-wiki.png',
+      imageUrl: imageUrlFromActionValue(storedActionValue),
       verified: true,
       isRealNFT: true,
       contractAddress,
