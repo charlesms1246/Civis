@@ -1,0 +1,36 @@
+# ====== OS & Editor ======
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ====== Logs ======
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+docs
+# ====== Environment files ======
+# Repo-level .env (if any); sub-project .env files are handled by app/.gitignore and contracts/.gitignore
+.env
+.env.local
+.env.*.local
+
+# ====== Dependencies ======
+node_modules/
+.next/
+
+# ====== Build outputs ======
+dist/
+out/
+
+# ====== Vercel ======
+.vercel/
