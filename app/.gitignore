@@ -1,0 +1,9 @@
+.next/
+node_modules/
+.env*
+
+# Vercel deployment
+.vercel/
+
+# TypeScript build info
+*.tsbuildinfo
