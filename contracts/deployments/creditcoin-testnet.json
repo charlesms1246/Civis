@@ -1,0 +1,11 @@
+{
+  "chainId": "102031",
+  "network": "Creditcoin Testnet",
+  "deployer": "0xce4389ACb79463062c362fACB8CB04513fA3D8D8",
+  "contracts": {
+    "CivisNFT": "0xb3Df63Ac5Ec5648d2E764a7C579148F29858E99D",
+    "CivisToken": "0x558298297E714312D5670dBe4dbc15E1D240a811",
+    "CivisProofVerifier": "0x96A4978752D0fC8FccDe3c168A6a9E1c20B62330"
+  },
+  "deployedAt": "4389952"
+}

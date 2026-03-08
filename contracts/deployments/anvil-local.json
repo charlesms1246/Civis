@@ -1,0 +1,11 @@
+{
+  "chainId": "31337",
+  "network": "Anvil Local",
+  "deployer": "0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38",
+  "contracts": {
+    "CivisNFT": "0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519",
+    "CivisToken": "0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496",
+    "CivisProofVerifier": "0x34A1D3fff3958843C43aD80F30b94c510645C316"
+  },
+  "deployedAt": "0"
+}
