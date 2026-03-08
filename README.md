@@ -85,8 +85,8 @@ Creditcoin Testnet (Chain ID: 102031)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/civis.git
-cd civis
+git clone https://github.com/charlesms1246/Civis.git
+cd Civis
 
 # 2. Install frontend dependencies
 cd app
